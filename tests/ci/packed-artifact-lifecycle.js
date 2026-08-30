@@ -258,6 +258,7 @@ function runTargetSmoke(options) {
       'install',
       '--modules', 'workflow-quality',
       '--target', options.target,
+      '--enable-hooks',
       '--json',
     ]),
     `${options.target} packed install`
@@ -339,6 +340,7 @@ function runLifecycle(options) {
       '--with', 'capability:ito-compute',
       '--with', 'capability:prediction-markets',
       '--target', 'cursor',
+      '--enable-hooks',
       '--json',
     ];
     parseJsonOutput(
